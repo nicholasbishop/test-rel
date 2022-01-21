@@ -1,0 +1,12 @@
+name: Deployment
+
+on:
+  workflow_dispatch
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    environment: release
+    steps:
+      - name: publish
+        run: echo 'I am pretending to publish stuff!'
