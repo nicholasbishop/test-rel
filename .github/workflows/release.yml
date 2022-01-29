@@ -6,12 +6,16 @@ on:
       package:
         description: 'Which package to release'
         required: true
-        default: 'warning'
+        default: 'uefi-macros'
         type: choice
         options:
         - uefi-macros
         - uefi-rs
         - uefi-services
+      version:
+        description: 'New version number'
+        required: true
+        type: version
 
 jobs:
   deployment:
