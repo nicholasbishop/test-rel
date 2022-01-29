@@ -21,4 +21,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: publish
-        run: echo "${{ github.event.inputs.package }}: v${{ github.event.inputs.version }}"
+        run: echo  The tag is ${{ github.event.inputs.pacage }} 
