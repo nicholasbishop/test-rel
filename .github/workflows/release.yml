@@ -2,6 +2,16 @@ name: Deployment
 
 on:
   workflow_dispatch
+    inputs:
+      package:
+        description: 'Which package to release'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+        - uefi-macros
+        - uefi-rs
+        - uefi-services
 
 jobs:
   deployment:
