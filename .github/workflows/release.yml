@@ -6,7 +6,6 @@ on:
       package:
         description: 'Which package to release'
         required: true
-        default: 'uefi-macros'
         type: choice
         options:
         - uefi-macros
@@ -15,11 +14,11 @@ on:
       version:
         description: 'New version number'
         required: true
-        type: version
+        type: string
 
 jobs:
   deployment:
     runs-on: ubuntu-latest
     steps:
       - name: publish
-        run: echo 'I am pretending to publish stuff!'
+        run: echo 'I am pretending to publish stuff! ${{ github.event.inputs.package }}: v${{ github.event.inputs.version }}'
