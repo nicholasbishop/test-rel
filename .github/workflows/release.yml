@@ -21,4 +21,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: publish
-        run: echo 'I am pretending to publish stuff! ${{ github.event.inputs.package }}: v${{ github.event.inputs.version }}'
+        run: echo I am pretending to publish stuff! ${{ github.event.inputs.package }}: v${{ github.event.inputs.version }}
